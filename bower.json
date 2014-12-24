@@ -1,19 +1,21 @@
 {
-  "name": "seed-element",
-  "version": "0.0.0",
+  "name": "dual-fab",
+  "version": "0.1.0",
   "authors": [
-    "Anonymous <anonymous@example.com>"
+    "Trystan Johnson"
   ],
-  "description": "Element providing solution to no problem in particular.",
+  "description": "A paper-fab that toggles between two icons",
   "keywords": [
     "web-component",
     "web-components",
     "polymer",
-    "seed"
+    "paper-fab",
+    "dual-fab",
+    "floating action button"
   ],
-  "main": "seed-element.html",
+  "main": "dual-fab.html",
   "license": "MIT",
-  "homepage": "https://github.com/<USERNAME>/seed-element/",
+  "homepage": "https://github.com/trystanj/dual-fab/",
   "ignore": [
     "/.*",
     "/tests/"
