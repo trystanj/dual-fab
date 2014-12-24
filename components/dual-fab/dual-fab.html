@@ -1,0 +1,60 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../paper-fab/paper-fab.html">
+<link rel="import" href="../core-icons/core-icons.html">
+
+<!--
+## Dual-fab
+
+A paper-fab that toggles between two icons
+
+<dual-fab icon="create" secondaryIcon="close"></dual-fab>
+
+@element dual-fab
+@extends paper-fab
+@blurb A paper-fab that toggles between two icons
+@status alpha
+@homepage https://github.com/trystanj/dual-fab
+-->
+<polymer-element name="dual-fab" extends="paper-fab" attributes="secondaryIcon">
+
+	<template>
+
+		<style>
+			:host::shadow core-icon {
+				transition: all 0.35s ease-in-out;
+			}
+
+			:host::shadow .spin {
+				transform: rotate(180deg);
+			}
+		</style>
+
+		<shadow></shadow>
+
+	</template>
+
+	<script>
+
+		Polymer({
+			primaryIcon: null,
+			secondaryIcon: null,
+
+			/**
+			 * The `ready` method attaches a click listener to the element. This toggles the spin animation
+			 * and swaps the icons back and forth.
+			 *
+			 * @method ready
+			 */
+			ready: function () {
+				this.primaryIcon = this.icon;
+
+				this.addEventListener('click', function() {
+					this.$.icon.classList.toggle('spin');
+					this.icon = (this.icon === this.primaryIcon ? this.secondaryIcon : this.primaryIcon);
+				});
+			}
+		});
+
+	</script>
+
+</polymer-element>

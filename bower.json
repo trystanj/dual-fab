@@ -1,0 +1,7 @@
+{
+  "name": "dual-fab#gh-pages",
+  "private": true,
+  "dependencies": {
+    "dual-fab": "trystanj/dual-fab#master"
+  }
+}
