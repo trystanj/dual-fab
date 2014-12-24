@@ -3,7 +3,7 @@
 <link rel="import" href="../core-icons/core-icons.html">
 
 <!--
-## Dual-fab
+#### Dual-fab
 
 A paper-fab that toggles between two icons
 
@@ -36,6 +36,13 @@ A paper-fab that toggles between two icons
 	<script>
 
 		Polymer({
+			/**
+			 * The `author` attribute sets an initial author
+			 *
+			 * @attribute primaryIcon
+			 * @type string
+			 * @default 'null'
+			 */
 			primaryIcon: null,
 			secondaryIcon: null,
 
